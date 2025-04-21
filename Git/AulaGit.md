@@ -334,7 +334,7 @@ E --> |"git restore main.py"| F[Last commited file recovered from Git Repository
     - **`git restore --staged main.py`**: Remove o arquivo `main.py` da **Staging Area**, retornando-o ao Working Directory sem as mudanças serem cometidas. Ele volta ao estado antes de ser adicionado à Staging Area. O arquivo local não é impactado. Para tal, é necessário executar git restore main.py. Desta forma, para recuperar, após o git add, é necessário executar:
 
 ```bash
-git restore --stage main.py
+git restore --staged main.py
 git restore main.py
 ```
 
