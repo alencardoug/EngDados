@@ -322,6 +322,7 @@ subgraph Git Repository
 end
 
 D --> E[main.py in Working Directory];
+E --> |"git restore main.py"| F[Last commited file recovered from Git Repository to Working Directory];
 ```
 
 ### Explicação do Fluxo:
