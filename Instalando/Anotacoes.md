@@ -19,6 +19,7 @@ Ver vídeo para copiar as configurações de cada instalação)
 ---
 Abrindo um arquivo.py via cmd.exe
 ---
+
 **Comando para navegar:**
 - dir
 - cd nomedapasta
@@ -28,12 +29,13 @@ Abrindo um arquivo.py via cmd.exe
 # Instalar git
 - git-scm.com
 - Instala o Git Bash
+
 **Navegar no prompt do Git Bash:**
 - ls (listar diretórios)
 - cd pasta/
 - clear
 - python arquivo.py
-**Git no Git Bash:**
+# **Git no Git Bash:**
 git --version
 
 git init
