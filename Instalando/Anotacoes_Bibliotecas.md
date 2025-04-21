@@ -19,3 +19,17 @@ Instalar (ver vídeo do Jornada)
 - pyenv local 3.12.1 (configurado localmente, cria um arquivo .python-version na pasta do projeto)
 
 # PIP
+Faz a gestão de dependencias: baixando do pypi.org
+- pip list
+- pip uninstall pandas (biblioteca por biblioteca)
+
+**Desinstalando várias bibliotecas (executar nesta ordem)**
+- pip freeze
+- pip freeze | grep -v "^-e" | xargs pip uninstall -y
+- pip list
+
+**Instalando bibliotecas distintas em cada projeto (venv)**
+- cd pasta/ (para navegar)
+- python -m venv .venv (usando python e o módulo do python venv, com nome .venv, e cria o ambiente virtual)
+- ls -al (mostra a pasta e arquivo criado)
+- 
