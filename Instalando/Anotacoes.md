@@ -35,23 +35,16 @@ Abrindo um arquivo.py via cmd.exe
 - cd pasta/
 - clear
 - python arquivo.py
-# **Git no Git Bash:**
-git --version
 
-git init
-
-ls -al
-
-git add main.py
-
-git config --global user.email "email@provedor"
-
-git config --global user.name "nome"
-
-git log
-
-git commit -m "comentario"
-
+**Git no Git Bash:**
+- git --version
+- git init
+- ls -al
+- git add main.py
+- git config --global user.email "email@provedor"
+- git config --global user.name "nome"
+- git log
+- git commit -m "comentario"
 
 **Existem configurações sistêmicas específicas para habilitar cada ferramenta**
 
