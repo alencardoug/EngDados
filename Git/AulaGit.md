@@ -245,13 +245,16 @@ Você verá que `main.py` está listado como um arquivo não rastreado (untracke
 git add main.py
 ```
 
-Evite usar git add . pois ele salvará as senhas que estejam na pasta de trabalho.
+Evite usar git add . pois ele rastreará (track) e sincronizará todos os arquivos, incluindo as senhas que estejam na pasta de trabalho em possível arquivo .env. Caso dê git add . pode executar para não rastrear o arquivo .env em seguida:
 
 ```bash
-git add . (evite usar)
+git add .
+git rm --cached .env
 ```
 
-Agora, faremos o primeiro commit para salvar o estado inicial do projeto:
+Neste caso, foi executado para rastrear (track) todos os arquivos, e em seguida, requisitado para não rastrear (untrack) o arquivo .env que comumente possui senhas.
+
+Ciente destes informações, então, optaremos por fazer o primeiro commit para salvar o estado inicial do projeto:
 
 ```bash
 git commit -m "Adiciona o arquivo main.py com um simples print"
