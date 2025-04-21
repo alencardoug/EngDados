@@ -245,6 +245,12 @@ Você verá que `main.py` está listado como um arquivo não rastreado (untracke
 git add main.py
 ```
 
+Evite usar git add . pois ele salvará as senhas que estejam na pasta de trabalho.
+
+```bash
+git add . (evite usar)
+```
+
 Agora, faremos o primeiro commit para salvar o estado inicial do projeto:
 
 ```bash
