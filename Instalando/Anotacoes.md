@@ -11,36 +11,29 @@ Ver vídeo para copiar as configurações de cada instalação)
 - print(aula)
 
 # Instalado: VSCode
-code.visualstudio.com
-Instalado extensão Python
-Instalado Material Icon Theme
-Criado um arquivo.py via VSCode em determinada pasta
+- code.visualstudio.com
+- Instalado extensão Python
+- Instalado Material Icon Theme
+- Criado um arquivo.py via VSCode em determinada pasta
 
 ---
 Abrindo um arquivo.py via cmd.exe
 ---
-Comando para navegar:
-dir
-cd nomedapasta
-clr
-Executar o arquivo.py:
-python arquivo.py
+**Comando para navegar:**
+- dir
+- cd nomedapasta
+- clr
+- python arquivo.py (executar o arquivo.py)
 
-Instalar git
-git-scm.com
-Instala o Git Bash
-Navegar no prompt:
-ls (listar diretórios)
-cd pasta/
-clear
-executar python:
-python arquivo.py
-
-**Existem configurações sistêmicas específicas para habilitar cada ferramenta**
-
-Git Bash
-ls
-cd
+# Instalar git
+- git-scm.com
+- Instala o Git Bash
+**Navegar no prompt do Git Bash:**
+- ls (listar diretórios)
+- cd pasta/
+- clear
+- python arquivo.py
+**Git no Git Bash:**
 git --version
 git init
 ls -al
@@ -49,3 +42,7 @@ git config --global user.email "email@provedor"
 git config --global user.name "nome"
 git log
 git commit -m "comentario"
+
+
+**Existem configurações sistêmicas específicas para habilitar cada ferramenta**
+
