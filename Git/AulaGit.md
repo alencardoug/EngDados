@@ -293,7 +293,7 @@ end
     - **`git commit -m 'Update main.py'`**: Um novo commit é criado, e as mudanças são salvas na caixa do Git Repository.
 
 - **Opção 2: `git restore`**:
-    - **`git restore main.py`**: O arquivo `main.py` no Working Directory é restaurado a partir da última versão salva no Git Repository, descartando as mudanças feitas localmente.
+    - **`git restore main.py`**: O arquivo `main.py` no Working Directory é restaurado a partir da última versão salva no Git Repository, descartando as mudanças salvas localmente. Este restore ocorreu antes do git add, então ele reflete no arquivo, alterando-o localmente.
 
 Esse diagrama ilustra claramente como as mudanças fluem entre o Working Directory, a Staging Area, e o Git Repository, dependendo da ação escolhida (`git add` ou `git restore`).
 
@@ -330,9 +330,14 @@ D --> E[main.py in Working Directory];
     - **`git commit -m 'Update main.py'`**: Cria um novo commit no Git Repository, salvando as mudanças que estavam na Staging Area.
 
 - **Opção 2: `git restore --staged`**:
-    - **`git restore --staged main.py`**: Remove o arquivo `main.py` da Staging Area, retornando-o ao Working Directory sem as mudanças serem cometidas. Ele volta ao estado antes de ser adicionado à Staging Area.
+    - **`git restore --staged main.py`**: Remove o arquivo `main.py` da **Staging Area**, retornando-o ao Working Directory sem as mudanças serem cometidas. Ele volta ao estado antes de ser adicionado à Staging Area. O arquivo local não é impactado. Para tal, é necessário executar git restore main.py. Desta forma, para recuperar, após o git add, é necessário executar:
 
-Vamos seguir com o commit
+```bash
+git restore --stage main.py
+git restore main.py
+```
+
+Mas, vamos seguir com o commit
 
 ### 2. Primeiro Save no Commit
 
