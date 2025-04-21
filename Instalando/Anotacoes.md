@@ -1,14 +1,16 @@
-(ver vídeo para copiar as configurações de cada instalação)
-Instalado: Python
-python.org
-Win + R: cmd
-execute python --version
-execute python
-print('Jornada de dados')
-aula = 'Jornada de dados'
-print(aula)
+---
+Ver vídeo para copiar as configurações de cada instalação)
+---
+# Instalado: Python
+- python.org
+- Win + R: cmd
+- execute python --version
+- execute python
+- print('Jornada de dados')
+- aula = 'Jornada de dados'
+- print(aula)
 
-Instalado: VSCode
+# Instalado: VSCode
 code.visualstudio.com
 Instalado extensão Python
 Instalado Material Icon Theme
