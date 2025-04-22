@@ -540,7 +540,7 @@ Aqui, o comando `git reset --hard` move o `HEAD` de volta para a "Primeira Modif
 Se você quer preservar o estado atual do projeto, mas precisa voltar a um commit anterior para experimentar algo novo, pode criar uma nova branch a partir desse commit:
 
 ```bash
-git checkout -b experiment <hash_do_commit>
+git checkout -b nomedanovabranch <hash_do_commit>
 ```
 
 Isso cria uma nova branch chamada `experiment`, começando a partir do commit que você especificou.
