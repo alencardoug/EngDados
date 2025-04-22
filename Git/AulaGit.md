@@ -743,6 +743,12 @@ graph TD;
   git branch -d feature-3
   ```
 
+### 11. Resolvendo erro de merge
+Ocorre quando a mesclagem apresenta conflito. Precisa analisar como mesclar.
+```bash
+Abrir o arquivo, manter somente o código final, e salvar.
+```
+
 ### Conclusão:
 
 Esse fluxo permite que cada funcionalidade seja desenvolvida em isolamento, testada individualmente e, quando pronta, integrada ao código de produção sem afetar o `main` até que tudo esteja pronto. Isso torna o processo de desenvolvimento mais seguro e organizado, minimizando conflitos e problemas na integração das funcionalidades.
