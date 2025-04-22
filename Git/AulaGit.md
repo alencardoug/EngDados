@@ -423,6 +423,8 @@ git log
 
 O `git log` exibirá uma lista de todos os commits, mostrando as mensagens e os identificadores únicos (hashes) dos commits.
 
+Se precisar editar a mensagem do último git commit, pode usar o comando git commit --amend
+
 ### 6. Entendendo o `HEAD`
 
 O `HEAD` é um apontador especial que indica o commit atual em que você está trabalhando. Normalmente, o `HEAD` aponta para a branch `main`, que é a linha principal de desenvolvimento do projeto.
