@@ -447,10 +447,15 @@ Branches são como linhas do tempo paralelas no seu repositório. Elas permitem 
 
 **Criando uma Nova Branch:**
 
-Vamos criar uma nova branch chamada `nova-feature` para trabalhar em uma nova funcionalidade:
+Vamos criar uma nova branch chamada `nova-feature` ou `ticket-number` para trabalhar em uma nova funcionalidade:
 
 ```bash
 git branch nova-feature
+```
+
+Para verificar quais branchs estão criadas, e onde está o HEAD:
+```bash
+git branch
 ```
 
 Agora, podemos mudar para essa branch e começar a trabalhar nela:
