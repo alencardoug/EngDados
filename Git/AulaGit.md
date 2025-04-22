@@ -658,24 +658,27 @@ Vamos continuar o exemplo, adicionando os comandos para mesclar as branches de f
 
 ### Mesclando as Branches de Funcionalidade no `main`:
 
-Depois que cada funcionalidade estiver pronta, você pode mesclar essas branches de volta ao `main`. Aqui estão os passos:
+Depois que cada funcionalidade estiver pronta, você pode mesclar essas branches de volta ao `main`. Após mesclar, os branchs são excluídos pelo código. Aqui estão os passos:
 
 1. **Mesclar `feature-1` no `main`**:
     ```bash
     git checkout main
     git merge feature-1
+    git branch -d feature-1
     ```
 
 2. **Mesclar `feature-2` no `main`**:
     ```bash
     git checkout main
     git merge feature-2
+    git branch -d feature-2
     ```
 
 3. **Mesclar `feature-3` no `main`**:
     ```bash
     git checkout main
     git merge feature-3
+    git branch -d feature-3
     ```
 
 ### Diagrama Mermaid Atualizado:
@@ -723,18 +726,21 @@ graph TD;
   ```bash
   git checkout main
   git merge feature-1
+  git branch -d feature-1
   ```
 
 - **Mesclar `feature-2` no `main`**:
   ```bash
   git checkout main
   git merge feature-2
+  git branch -d feature-2
   ```
 
 - **Mesclar `feature-3` no `main`**:
   ```bash
   git checkout main
   git merge feature-3
+  git branch -d feature-3
   ```
 
 ### Conclusão:
