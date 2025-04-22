@@ -32,8 +32,13 @@ cd projeto-git
 Dentro da pasta, vamos criar um arquivo Python simples:
 
 ```bash
-touch main.py
+touch main.py 
 ```
+ou
+```bash
+code main.py 
+```
+e depois, salvar o arquivo criado.
 
 Abra o arquivo `main.py` e adicione o seguinte código:
 
@@ -420,6 +425,11 @@ Agora, podemos usar o `git log` para visualizar o histórico de commits e ver to
 ```bash
 git log
 ```
+ou
+```bash
+git log --oneline
+```
+
 
 O `git log` exibirá uma lista de todos os commits, mostrando as mensagens e os identificadores únicos (hashes) dos commits.
 
