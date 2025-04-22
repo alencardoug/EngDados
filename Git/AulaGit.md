@@ -425,9 +425,13 @@ Agora, podemos usar o `git log` para visualizar o histórico de commits e ver to
 ```bash
 git log
 ```
-ou
+ou, para resumir em uma linha:
 ```bash
 git log --oneline
+```
+ou, para resumir em uma linha e mostrar os merges ocorridos:
+```bash
+git log --oneline --graph --all
 ```
 
 
