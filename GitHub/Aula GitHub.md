@@ -559,6 +559,7 @@ graph TD;
 - **Coloque o `.gitignore` no início do projeto**: É uma boa prática configurar o `.gitignore` logo no início do desenvolvimento para evitar que arquivos indesejados sejam adicionados ao repositório.
 - **Não ignore demais**: Certifique-se de que apenas arquivos realmente desnecessários sejam ignorados. Ignorar demais pode levar à perda de arquivos importantes.
 - **Modelos de `.gitignore`**: Existem modelos prontos de `.gitignore` para diferentes linguagens e frameworks. O GitHub, por exemplo, oferece uma ampla coleção de templates de `.gitignore` [aqui](https://github.com/github/gitignore).
+- **Lista predefinida**: acesse toptal.com/developers/gitignore, escreva python na caixa de busca e adeque a lista à necessidade.
 
 ### Conclusão
 
