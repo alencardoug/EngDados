@@ -31,6 +31,7 @@ Abrindo um arquivo.py via cmd.exe
 - Instala o Git Bash
 
 **Navegar no prompt do Git Bash:**
+- pwd (print working directory: pasta atual)
 - ls (listar diretórios)
 - cd pasta/
 - clear
