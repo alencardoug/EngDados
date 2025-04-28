@@ -451,6 +451,12 @@ Esse fluxo reflete um ciclo de desenvolvimento completo e organizado, promovendo
 
 ## 8. Fazendo `git clone`
 
+Clonar repositório ou projeto cria localmente uma cópia espelho e que espelha o repositório no github. Alterações no github impactam na cópia local. As alterações feitas localmente poderão impactar o repositório ou projeto original que está no github, espelhado com o local.
+
+É diferente do 'fork' repositório ou projeto, que copia o repositório e cria uma cópia independente do original no github. Logo, edições não serão enviadas para o original, mas para a cópia no github forkeada (em garfo).
+
+Em um projeto que podemos alterar, como os da nossa empresa/time, é esperado que seja feito um 'clone' do repositório. Em um projeto no qual não temos permissão para alterar, é esperado fazer um 'fork'.
+
 ### Como Clonar um Repositório
 
 1. **Clonando um Repositório Existente**:
