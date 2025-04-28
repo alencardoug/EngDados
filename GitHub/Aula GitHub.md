@@ -599,3 +599,33 @@ O `README.md` é um arquivo de texto, geralmente escrito em formato Markdown, qu
 
 7. **Referências e Créditos**:
    - Agradecimentos e links para recursos, bibliotecas ou pessoas que contribuíram para o projeto.
+
+### 11. Usando o CLI GitHub
+
+### Para que serve?
+
+Programa instalável que permite executar ações no github via Command Line Interface, ou seja, permite não necessitar da interface gráfica via navegador. 
+
+Permite que você liste as opções de comando, via menu help:
+```bash
+gh -h
+```
+
+Uma sequencia de códigos é utilizado para criar um repositório:
+```bash
+gh auth #para configurar
+gh auth login #seguir passos para logar
+gh repo create #seguir passos para criar repositório
+cd nome_do_repositorio
+code . #para abrir no vs code
+```
+
+No VS Code:
+```bash
+cd nome_do_projeto
+touch exemplo.py
+git add exemplo.py
+git commit -m "Exemplo"
+git push
+```
+
