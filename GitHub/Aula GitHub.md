@@ -330,8 +330,8 @@ graph TD;
     git push -u origin feature-1
     ```
 
-2. **Criar um Pull Request para `feature-1`**:
-    - No GitHub, crie um Pull Request da branch `feature-1` para a `main`.
+2. **Criar um Pull Request e Merge para `feature-1`**:
+    - No GitHub, crie um Pull Request e Merge da branch `feature-1` para a `main`.
     - Aguarde a revisão e aprovação do PR.
 
 3. **Criar e Mudar para a Branch `feature-2`**:
@@ -343,8 +343,8 @@ graph TD;
     git push -u origin feature-2
     ```
 
-4. **Criar um Pull Request para `feature-2`**:
-    - No GitHub, crie um Pull Request da branch `feature-2` para a `main`.
+4. **Criar um Pull Request e Merge para `feature-2`**:
+    - No GitHub, crie um Pull Request e Merge da branch `feature-2` para a `main`.
     - Aguarde a revisão e aprovação do PR.
 
 5. **Criar e Mudar para a Branch `feature-3`**:
@@ -356,9 +356,29 @@ graph TD;
     git push -u origin feature-3
     ```
 
-6. **Criar um Pull Request para `feature-3`**:
-    - No GitHub, crie um Pull Request da branch `feature-3` para a `main`.
+6. **Criar um Pull Request e Merge para `feature-3`**:
+    - No GitHub, crie um Pull Request e Merge da branch `feature-3` para a `main`.
     - Aguarde a revisão e aprovação do PR.
+
+7. **Excluir branches depois do merge**:
+    - Excluir o branch do remoto e o branch do local
+```bash
+git branch -d nome_do_branch #pode ser necessário forçar, usando -D
+git push origin --delete nome_do_branch #exclui o branch do remoto
+git fetch --prune # ou: git remote prune origin #atualiza o status
+```
+
+```bash
+# Locais
+git branch                # lista só locais
+git branch -a             # lista locais + remotos
+
+# Remoto específico
+git ls-remote --heads origin | grep nome-do-branch
+
+# Execução em uma linha
+git branch -d nome_do_branch && git push origin --delete nome_do_branch
+```
 
 ### Diagrama Mermaid Atualizado com PRs:
 
