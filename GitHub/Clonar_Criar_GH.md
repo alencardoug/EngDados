@@ -27,3 +27,22 @@ Com isso, foi verificado/executado:
 - Verificar status, se deleção está no staged
 - Comitar deleção
 - Sincronizar local ao remoto via push
+
+# Criar repositório do zero em ambos local e remoto
+
+Abrir o bash e executar:
+```bash
+ls|cd|mkdir|clear
+#Criar repositório no githu de preferencia com o mesmo nome
+#Copiar as 7 linhas de comando para criar um novo repositório; sugerido pelo github:
+echo "# aula-2_bootcamp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:lvgalvao/aula02_bootcamp.git
+git push -u origin main
+```
+
+O primeiro comando tira um print no terminal e salva no arquivo readme. 
+Os outros comando, iniciam a sincronização.
