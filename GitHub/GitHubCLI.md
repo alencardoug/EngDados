@@ -13,6 +13,7 @@
 4. [Fazer o merge pelo CLI](#fazer-o-merge-pelo-cli)  
 5. [Limpeza pós-merge](#limpeza-pós-merge)  
 6. [Checklist rápido](#checklist-rápido)
+7. [Após a requisição até o merge](#requisicao-merge)
 
 ---
 
@@ -113,3 +114,31 @@ git fetch --prune origin         # limpa referência remota obsoleta
 ```
 
 Pronto! Com estes comandos você realiza todo o fluxo de Pull Request e merge diretamente no terminal.
+
+### 7. [Após a requisição ao merge](#requisicao-merge)
+
+Uma vez sincronizado o main, precisaremos iniciar um novo desenvolvimento. Esta sequencia permite criar branch, entrar, criar o arquivo.py, acessar, descrever com #, salvar, sincronizar ao git, sincronizar ao github, fazer pull request, mergear e uma vez finalizado o projeto, limpar os branchs tanto do remoto quanto do local.
+
+```bash
+git checkout -b ex05
+touch ex05.py
+code ex05.py
+```
+
+```python
+# Iniciando o desenvolvimento ex05.py
+```
+- ctrl + s
+
+```bash
+git add ex05.py
+git commit -m "criado branch ex05 e criado arquivo ex05.py"
+git push -u origin ex05
+gh pr create
+gh pr merge --squash
+```
+
+- uma vez finalizado o desenvolvimento, substituir adicionando --delete-branch:
+```bash
+gh pr merge --squash --delete-branch
+```
