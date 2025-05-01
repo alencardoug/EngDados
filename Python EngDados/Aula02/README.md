@@ -352,6 +352,8 @@ A estrutura `try-except` é usada para tratamento de exceções em Python. Uma e
 
 * **try:** Este bloco é o primeiro na estrutura de tratamento de exceções. Python tenta executar o código dentro deste bloco.
 * **except:** Se uma exceção ocorrer no bloco `try`, a execução imediatamente salta para o bloco `except`. Você pode especificar tipos de exceção específicos para capturar e tratar apenas essas exceções. Se nenhum tipo de exceção for especificado, ele captura todas as exceções.
+* **else:** Se tudo der certo, executa o que está neste bloco.
+* **finally:** Independente de ter dado certo ou errado, executa o que está neste bloco.
 
 #### Exemplo de try-except
 
