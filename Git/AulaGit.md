@@ -763,6 +763,35 @@ Ocorre quando a mesclagem apresenta conflito. Precisa analisar como mesclar.
 Abrir o arquivo, manter somente o código final, e salvar.
 ```
 
+### 12. Usando o Git Diff:
+
+Para comparar dois arquivos no Git local, utilize o comando git diff seguido dos caminhos dos arquivos a serem comparados. Por exemplo, git diff arquivo1.txt arquivo2.txt exibirá as diferenças entre esses dois arquivos. 
+
+#### **Detalhes**:
+- git diff: Este comando é a ferramenta principal para visualizar diferenças no Git. 
+
+arquivo1.txt: O caminho para o primeiro arquivo que você deseja comparar. 
+
+arquivo2.txt: O caminho para o segundo arquivo que você deseja comparar. 
+
+Exemplos:
+- Comparar um arquivo com sua versão no índice (stage): git diff arquivo.txt. 
+- Comparar um arquivo com seu estado no repositório: git diff --cached arquivo.txt. 
+- Comparar dois arquivos entre dois branches: git diff branch1/arquivo.txt branch2/arquivo.txt. 
+- Comparar dois arquivos entre dois commits: git diff commit_hash1/arquivo.txt commit_hash2/arquivo.txt. 
+
+Outras opções:
+
+- --unified (ou -u): Permite que o diff seja exibido em um formato mais fácil de ler, com blocos de linhas alteradas.
+- --word-diff: Exibe as diferenças em nível de palavra, em vez de linha.
+- --ignore-space-change: Ignora mudanças de espaços em branco ao comparar.
+- --color: Exibe a diferença com cores para facilitar a identificação das mudanças. 
+
+Uso:
+```bash
+git diff -u main.py
+```
+
 ### Conclusão:
 
 Esse fluxo permite que cada funcionalidade seja desenvolvida em isolamento, testada individualmente e, quando pronta, integrada ao código de produção sem afetar o `main` até que tudo esteja pronto. Isso torna o processo de desenvolvimento mais seguro e organizado, minimizando conflitos e problemas na integração das funcionalidades.
