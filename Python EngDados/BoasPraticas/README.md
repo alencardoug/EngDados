@@ -1,5 +1,7 @@
 # Boas práticas
 
+(teste via pc linux)
+
 ### Performance
 
 1 . Pandas é uma biblioteca robusta, mas avoluma 200 mb de processo.
