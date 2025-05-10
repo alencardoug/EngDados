@@ -80,6 +80,16 @@ Esses resultados enfatizam a importância de selecionar a ferramenta adequada pa
 
 Duckdb vence tambem com 1 milhao de linhas, realmente é o melhor
 
+## Como Executar (by Doug)
+1.0. Clone o repositório
+1.1. Crie uma nova pasta 'umbi' fora do One-Billion-Row-Challenge-Python
+1.1. Copie o .gitignore, README.md e data/weather_stations.csv
+2.0. Definir a versao do Python usando o `pyenv local 3.12.1`. Se não funcionar, executar antes o `pyenv install 3.12.1` 
+2.1. Executar `poetry init` uma vez que não há pyproject.toml. Configurar sem dependências. Após, executar `poetry env use`3.12.1`. 
+2.2. Próxima vez que acessar a pasta, acessar o .venv, usando `poetry shell`
+2.3. O código `poetry config virtualenvs.in-project true` força que o .venv fique visível dentro da pasta do projeto.
+3.0. Parei no 2.3. 
+
 ## Como Executar
 
 Para executar este projeto e reproduzir os resultados:
