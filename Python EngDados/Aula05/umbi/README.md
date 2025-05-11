@@ -86,9 +86,10 @@ Duckdb vence tambem com 1 milhao de linhas, realmente é o melhor
 1.1. Copie o .gitignore, README.md e data/weather_stations.csv
 2.0. Definir a versao do Python usando o `pyenv local 3.12.1`. Se não funcionar, executar antes o `pyenv install 3.12.1` 
 2.1. Executar `poetry init` uma vez que não há pyproject.toml. Configurar sem dependências. Após, executar `poetry env use`3.12.1`. 
-2.2. Próxima vez que acessar a pasta, acessar o .venv, usando `poetry shell`
-2.3. O código `poetry config virtualenvs.in-project true` força que o .venv fique visível dentro da pasta do projeto.
-3.0. Parei no 2.3. 
+2.2. Próxima vez que acessar a pasta, acessar o .venv, usando `source .venv/bin/activate` (funciona para o linux. Para windows é .venv\Scripts\activate.bat ou .venv\Scripts\Activate.ps1
+). Para confirmar que acessou, use `which python`.
+2.3. O código `poetry config virtualenvs.in-project true` que foi usado força que o .venv fique visível dentro da pasta do projeto. Se não tivesse usado esse código, para ativar o venv seria `source $(poetry env info --path)/bin/activate`. Para saber onde está o .venv, basta usar `poetry env info --path`.
+3.0. 
 
 ## Como Executar
 
