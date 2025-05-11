@@ -89,7 +89,9 @@ Duckdb vence tambem com 1 milhao de linhas, realmente é o melhor
 2.2. Próxima vez que acessar a pasta, acessar o .venv, usando `source .venv/bin/activate` (funciona para o linux. Para windows é .venv\Scripts\activate.bat ou .venv\Scripts\Activate.ps1
 ). Para confirmar que acessou, use `which python`.
 2.3. O código `poetry config virtualenvs.in-project true` que foi usado força que o .venv fique visível dentro da pasta do projeto. Se não tivesse usado esse código, para ativar o venv seria `source $(poetry env info --path)/bin/activate`. Para saber onde está o .venv, basta usar `poetry env info --path`.
-3.0. 
+3.0. Execute o comando `python src/create_measurements.py` para gerar o arquivo de teste. Atentar para editar a linha que contém a quantidade de linhas a criar.
+4.0. Leva 1 segundo para criar 1_000_000 de linhas
+5.0 Ver no vídeo como verificar as bibliotecas
 
 ## Como Executar
 
