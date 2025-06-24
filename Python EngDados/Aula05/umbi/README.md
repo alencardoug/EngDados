@@ -82,16 +82,26 @@ Duckdb vence tambem com 1 milhao de linhas, realmente é o melhor
 
 ## Como Executar (by Doug)
 1.0. Clone o repositório
+
 1.1. Crie uma nova pasta 'umbi' fora do One-Billion-Row-Challenge-Python
+
 1.1. Copie o .gitignore, README.md e data/weather_stations.csv
+
 2.0. Definir a versao do Python usando o `pyenv local 3.12.1`. Se não funcionar, executar antes o `pyenv install 3.12.1` 
-2.1. Executar `poetry init` uma vez que não há pyproject.toml. Configurar sem dependências. Após, executar `poetry env use`3.12.1`. 
+
+2.1. Executar `poetry init` uma vez que não há pyproject.toml. Configurar sem dependências. Após, executar `poetry env use 3.12.1`. 
+
 2.2. Próxima vez que acessar a pasta, acessar o .venv, usando `source .venv/bin/activate` (funciona para o linux. Para windows é .venv\Scripts\activate.bat ou .venv\Scripts\Activate.ps1
 ). Para confirmar que acessou, use `which python`. Para desativar, `deactivate`.
+
 2.3. O código `poetry config virtualenvs.in-project true` que foi usado força que o .venv fique visível dentro da pasta do projeto. Se não tivesse usado esse código, para ativar o venv seria `source $(poetry env info --path)/bin/activate`. Para saber onde está o .venv, basta usar `poetry env info --path`.
+
 3.0. Execute o comando `python src/create_measurements.py` para gerar o arquivo de teste. Atentar para editar a linha que contém a quantidade de linhas a criar.
+
 4.0. Leva 1 segundo para criar 1_000_000 de linhas
+
 5.0. Ver no vídeo como verificar as bibliotecas: é arquivo passando cada arquivo.py
+
 7.0. Iceberg é uma forma dd armazenar (tal json ou parquet). Duckdb funciona bem com o iceberg. Databricks e spark usam delta table, que são parquet com metadados.
 
 ## Como Executar
