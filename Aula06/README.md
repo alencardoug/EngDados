@@ -138,4 +138,24 @@ git commit -m "pre commit adicionado"
 
 #Então funcionará.
 
-#Parei a aula 06 em 32:42
+#Sugerido instalar a biblioteca bandit (cybersecurity) e commitizen (padronizar commit).
+
+#Entrar no ambiente virtual é importante para permitir executar black .
+#Fora do ambiente virtual, precisa executar poetry run black .
+
+#Vale versionar tudo. SQL, js, Dockerfile, criar pasta Create table e ter os scripts SQL salvos.
+
+#Monorepo versus Multirepo
+#Monorepo tem a vantagem de compartilhar funções, como ler_arquivo_s3(), salvar_arquivo_s3(), etc.
+
+#Importante fazer typehint nas variaveis para facilitar a leitura, assim como isinstance para proteger o programa de quebra:
+
+nome_aluno: str = "Luciano" #typehint
+
+if isinstance (nome_aluno, str):
+   nome_aluno_maiusculo = nome_aluno.upper()
+   print(nome_aluno_maiusculo)
+else:
+   print("voce digitou uma classe errada, precisa ser str")
+
+#Aula 06 finalizada.
