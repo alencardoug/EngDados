@@ -188,7 +188,30 @@ valor_3 = valor_1 + valor_2
 
 #Tornando isto uma função: 
 ```
-def soma(valor_1: float, valor_2: float)
-    return valor_3 = valor_1 + valor_2
+def soma(valor_1:float, valor_2: float) -> float:
+    valor_3 = valor_1 + valor_2
+    return valor_3
 ```
 
+#Boas práticas: 
+```
+def soma(valor_1_para_somar: float, valor_2_para_somar: float) -> float:
+    """
+    Uma função simples de soma de valores do tipo float que retorna float.
+    """
+    resultado_da_soma = valor_1_para_somar + valor_2_para_somar
+    return resultado_da_soma
+```
+
+#PS: A docstring (o que está entre """ """ aparece quando coloca o mouse em cima da função.
+
+#Sobre formas de declarar a função. É possível destas 2 formas, incluindo a vantagem: 
+
+```
+valor_1 = 4
+valor_2 = 6
+soma(valor_1, valor_2)
+soma(valor_2_para_somar = valor_2, valor_1_para_somar = valor_1
+```
+
+# Parei em 17:00
