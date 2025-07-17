@@ -159,3 +159,36 @@ else:
    print("voce digitou uma classe errada, precisa ser str")
 
 #Aula 06 finalizada.
+
+#Aula 07 iniciada. 
+#Funcoes: um dos principais benefícios é permitir a reutilização do código.
+#Eficiência e produtividade para manter a entrega, mesmo com aumento de escopo.
+#Função é metodologia e padrão. É também criação de KPIs.
+#Exemplo: extrato do Excel, API, SQL; Transforma e Carrega em um DW, PostgreSQL, S3, Iceberg, DuckDB. Mas não interessa muito a tecnologia em si.
+#No exemplo, é ter uma função modificável, de forma que alterar em uma, altere em tudo.
+
+#Criar novo repositório.
+#Estrutura da função: 
+
+```
+def nome_da_funcao():
+    return funcao
+```
+
+#Funções precisam ser parametrizaveis. Que significa, em função de condições diferentes, se comporta de formas diferentes. 
+
+#Exemplo:
+
+```
+valor_1 = 4
+valor_2 = 6
+
+valor_3 = valor_1 + valor_2
+```
+
+#Tornando isto uma função: 
+```
+def soma(valor_1: float, valor_2: float)
+    return valor_3 = valor_1 + valor_2
+```
+
