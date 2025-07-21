@@ -195,7 +195,7 @@ def soma(valor_1:float, valor_2: float) -> float:
 
 #Boas práticas: 
 ```
-def soma(valor_1_para_somar: float, valor_2_para_somar: float) -> float:
+def soma(valor_1_para_somar: float, valor_2_para_somar: float = 10) -> float:
     """
     Uma função simples de soma de valores do tipo float que retorna float.
     """
@@ -204,6 +204,8 @@ def soma(valor_1_para_somar: float, valor_2_para_somar: float) -> float:
 ```
 
 #PS: A docstring (o que está entre """ """ aparece quando coloca o mouse em cima da função.
+
+#Colocando valores padrões se parâmetro não for informado: valor_2_para_somar: float = 10. Este valor é substituído se for informado outro valor na parametrização da função.
 
 #Sobre formas de declarar a função. É possível destas 2 formas, incluindo a vantagem: 
 
@@ -214,4 +216,47 @@ soma(valor_1, valor_2)
 soma(valor_2_para_somar = valor_2, valor_1_para_somar = valor_1
 ```
 
-# Parei em 17:00
+#Exemplo sendo resolvido (Aula 07, 22:00)
+
+#Arquivo csv criado: 
+```
+produto,price,entregue
+cadeira,500,False
+mesa,200,True
+mouse,50,False
+```
+
+#Funcao para ler arquivo csv:
+```python
+import csv
+
+def ler_csv(nome_do_arquivo_csv: str) -> list[dict]
+    """
+    Função que le um arquivo csv e retorna uma lista de dicionários 
+    """
+    lista = []
+    with open(nome_do_arquivo_csv, mode='r', encoding='utf-8') as arquivo:
+        leitor = csv.DictReader(arquivo)
+        for linha in leitor:
+            lista.append(linha)
+    return lista
+```
+
+#Funcao para filtrar os produtos entregues+sequência de execução:
+```
+def filtrar_produtos_nao_entregues(lista: list[dict]) -> list[dict]:
+   """
+   Função que filtra produtos onde entrega = True
+   """
+   lista_com_produtos_filtrados = []
+   for produto in lista:
+      if produto.get("entregue") == "True":
+         lista_com_produtos_filtrados.append(produto)
+   return lista_com_produtos_filtrados
+
+lista_de_produtos = ler_csv(path_arquivo)
+produtos_entregues = filtrar_produtos_nao_entregues(lista_de_produtos)
+print(produtos_entregues)
+
+# Parei em 29:00
+
