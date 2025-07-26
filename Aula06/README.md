@@ -227,6 +227,7 @@ mouse,50,False
 ```
 
 #Funcao para ler arquivo csv:
+#Importante que a função with() abre e fecha o arquivo
 ```python
 import csv
 
@@ -253,10 +254,41 @@ def filtrar_produtos_nao_entregues(lista: list[dict]) -> list[dict]:
       if produto.get("entregue") == "True":
          lista_com_produtos_filtrados.append(produto)
    return lista_com_produtos_filtrados
+```
+
+#Criar função somar_valores_dos_produtos
+
+```
+def somar_valores_dos_produtos(lista_com_produtos_filtrados: list[dict]) -> int:
+   """
+   Soma todos os produtos que estão na lista
+   """
+   valor_total = 0
+   for produto in lista_com_produtos_filtrados:
+      valor_total += int(produto.get("price"))
+   return valor_total
+```
+
+#E então, criar um main.py para encapsular, conectar as funções. 
+
+```
+from etl import ler_csv, filtrar_produtos_nao_entregues, somar_valores_dos_produtos
+
+path_arquivo = "vendas.csv"
+
+lista_de_produtos = ler_csv(path_arquivo)
+produtos_entregues = filtrar_produtos_nao_entregues(lista_de_produtos)
+valor_dos_produtos_entregues = somar_valores_dos_produtos(produtos_entregues)
+print(valor_dos_produtos_entregues)
+```
+
+
 
 lista_de_produtos = ler_csv(path_arquivo)
 produtos_entregues = filtrar_produtos_nao_entregues(lista_de_produtos)
 print(produtos_entregues)
 
-# Parei em 29:00
+
+
+# Iniciar aula 08
 
