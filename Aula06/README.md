@@ -288,7 +288,52 @@ lista_de_produtos = ler_csv(path_arquivo)
 produtos_entregues = filtrar_produtos_nao_entregues(lista_de_produtos)
 print(produtos_entregues)
 
+#Aula08
+#Criar pasta vazia via terminal com cd ls mkdir cd clear
+#Entrar no GitHub e new directory, mesmo nome da pasta. Copiar sequência de comando e jogar no terminal.
+# Configurar:
+
+pyenv local 3.11.5 #escolher versão do python
+poetry init #criar o ambiente virtual
+poetry shell #iniciar ambiente virtual
+code . #iniciar vscode
+
+#Criar .gitignore comendo .venv
+#Sincronizar tudo com GitHub:
+
+git add .
+git commit -m "primeiro commit"
+git push
+
+#Verificar no GitHub se foi.
+#Iniciando o desafio:
+#A partir de uma API de vendas, criar um dashboard. Concatenar os dados recebidos via json. Carregar em csv ou parquet.
+#Como serão lidos e carregados diferentes arquivos, primeiro será escolhida a ferramenta de processamento. opções citadas: pandas, polars, DuckDB, spark, dask. Foi escolhido o pandas, podendo refatorar pro DuckDB.
+#Quanto a ferramenta de qualidade: Pydantic ou Pandera. Se for trabalhar com dataframe, sql: Pandera. Se linha a linha ou API, Pydantic.
+
+#Se for usar ferramenta de processamento que contém dataframe (as 5 citadas) usar Pandera. Se não, como exemplo, usar fastapi, então usar Pydantic. Também é possível converter dataframe para estrutura de objeto.
+
+#Definido usar Pandera, por usar o Pandas, então:
+```terminal
+poetry add Pandera pandas
+```
+
+#Python puro usa dicionários. Mas é uma estrutura primitiva que não funciona para BigData. Para desafios BigData, usar dataframe e ferramenta de processamento + qualidade.
+
+#Neste treinamento, primeiro será tentado com dicionário (chave valor) e depois será resolvido via dataframe. Citado a importância de dominar funcionamento de dicionário, visto que há bancos que usam chave valor. há estruturas docker e CI tem toeml que usam chave valor. json usa chave valor. 
+
+#Etapa primeira: criar fluxo no excalidraw.com com fluxo e sequência de resolução 
+
+```
+etl.py
+pipeline.py #vai chamar o pipeline
+schema.py #
+pasta dados #validacao do dataframe
+```
+
+#Criada para data e colocados os 3 arquivos json.
+#Criado etl.py
 
 
-# Iniciar aula 08
+# Continuar aula 08: 
 
