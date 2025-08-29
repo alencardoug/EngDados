@@ -324,14 +324,34 @@ poetry add Pandera pandas
 
 #Etapa primeira: criar fluxo no excalidraw.com com fluxo e sequência de resolução 
 
+#Em seguida, criar módulos (os arquivos .py)
+
 ```
-etl.py
+etl.py #contem a lógica
 pipeline.py #vai chamar o pipeline
-schema.py #
-pasta dados #validacao do dataframe
+schema.py #validacao do dataframe
+pasta dados #arquivos json
 ```
 
 #Criada para data e colocados os 3 arquivos json.
+#json: Java script object notation.
+#É um arquivo de dicionário, chave: valor
+#Dados usa dataframe, enquanto front e back usam json.
+```json
+[
+   {
+      "chave": "valor",
+      "chave": número,
+      "chave": "data"
+   },
+   {
+      "chave": "valor",
+      "chave": "valor",
+      "chave": "valor"
+   }
+]
+```
+
 #Criado etl.py
 
 
