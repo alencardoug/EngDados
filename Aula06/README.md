@@ -413,9 +413,22 @@ if __name__ == "__main__":
    pasta = 'data'
    print(extrair_dados(nome_pasta=pasta))
 #esse teste em if em arquivo separado garante o teste em módulo unitário.
+#dunder names
 ```
 
+#Mais uns função em etl.py
 
+```python
+#uma função que transforma: 
 
-# Continuar aula 08: 
+def calcular_kpi_de_total_de_vendas(df: pd.DataFrame) -> pd.DataFrame:
+   df["Total"] = df["Quantidade"] * df["Venda"]
+   return df
+
+if __name__ == "__main__":
+   pasta_argumento = 'data'
+   data_frame = extrair_dados_e_consolidar(pasta=pasta_argumento)
+   print(calcular_kpi_de_total_de_vendas(data_frame))
+
+# Continuar aula 08: 33:33
 
