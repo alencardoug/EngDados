@@ -327,7 +327,7 @@ poetry add Pandera pandas
 #Em seguida, criar módulos (os arquivos .py)
 
 ```
-etl.py #contem a lógica
+etl.py #contem a lógica, as funções
 pipeline.py #vai chamar o pipeline
 schema.py #validacao do dataframe
 pasta dados #arquivos json
@@ -353,6 +353,68 @@ pasta dados #arquivos json
 ```
 
 #Criado etl.py
+
+#1.De o teste lógico para a função:
+#Teste lógico que printa mostrando que funciona
+
+```python
+import pandas as pd
+import os
+import glob
+#uma função de extract que le e consulta os json
+
+pasta = 'data'
+arquivos_json = glob.glob(os.path.join(pasta, '*.json'))
+df_list = [pd.read_json(arquivo) for arquivo in arquivo_json]
+df_total = pd.concat(df_list, ignore_index=True)
+print(df_total)
+```
+
+#2.De o teste lógico para a função local:
+
+```python
+import pandas as pd
+import os
+import glob
+#uma função de extract que le e consulta os json
+
+def extrair_dados(nome_pasta: str) -> pd.DataFrame:
+   arquivos_json = glob.glob(os.path.join(pasta, '*.json'))
+   df_list = [pd.read_json(arquivo) for arquivo in arquivo_json]
+   df_total = pd.concat(df_list, ignore_index=True)
+   return df_total
+
+if __name__ == "__main__":
+   pasta = 'data'
+   print(extrair_dados(nome_pasta=pasta))
+#esse teste em if previne que, se esquecer de tirar esse teste, não vai quebrar o módulo.
+
+```
+
+#3.De o teste lógico para a função unitário:
+
+etl.py
+```python
+import pandas as pd
+import os
+import glob
+#uma função de extract que le e consulta os json
+
+def extrair_dados(nome_pasta: str) -> pd.DataFrame:
+   arquivos_json = glob.glob(os.path.join(pasta, '*.json'))
+   df_list = [pd.read_json(arquivo) for arquivo in arquivo_json]
+   df_total = pd.concat(df_list, ignore_index=True)
+   return df_total
+```
+
+etl_teste.py
+```
+if __name__ == "__main__":
+   pasta = 'data'
+   print(extrair_dados(nome_pasta=pasta))
+#esse teste em if em arquivo separado garante o teste em módulo unitário.
+```
+
 
 
 # Continuar aula 08: 
