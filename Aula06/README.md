@@ -436,18 +436,66 @@ if __name__ == "__main__":
 poetry run python etl.py
 ```
 
+#Criando a ~função~ procedure para carregar dados:
+
+```python
+def carregar_dados(df: pd.DataFrame, format_saida: list):
+   """
+   parâmetro lista contendo "csv" e/ou "parquet"
+   """
+   for formato in format_saida:
+      if formato == 'csc':
+         df.to_csv("dados.csv", index=False)
+      if formato == 'parquet':
+         df.to_parquet("dados.parquet", index=False)
+
+if __name__ == "__main__":
+   pasta_argumento: str = 'data'
+   data_frame = extrair_dados_e_consolidar(pasta=pasta_argumento)
+   data_frame_calculado = calcular_kpi_de_total_de_vendas(data_frame)
+   formato_de_saida: list = ["csv", "parquet"]
+   carregar_dados(data_frame_calculado, formato_de_saida)
+```
+#Vai dar erro pois é pandas + parquet.
 #Para criar parquet com pandas:
+
 ```terminal
 poetry add fastparquet
 ```
 
-#Criando a ~função~ procedure para carregar dados:
-
-```python
-
-parâmetro que vai...
+#Para rodar o código:
+```terminal
+poetry run python etl.py
 ```
 
+#Como adequar para que um usuário execute via um pipeline.py
+#toda a parte if __name__ até o fim será (apagada, e) migrada em 2 arquivos, etl.py e pipeline.py:
 
-# Continuar aula 08: 33:33
+#etl.py
+```python
+def pipeline_calcular_kpi_de_vendas_consolidado(pasta: str, formato_de_saida: list):
+   data_frame = extrair_dados_e_consolidar(pasta=pasta_argumento)
+   data_frame_calculado = calcular_kpi_de_total_de_vendas(data_frame)
+   carregar_dados(data_frame_calculado, formato_de_saida)
+```
+
+#pipeline.py
+```python
+from etl import pipeline_calcular_kpi_de_vendas_consolidado
+
+pasta_argumento: str = 'data'
+formato_de_saida: list = ["csv"]
+
+pipeline_calcular_kpi_de_vendas_consolidado(pasta_argumento, formato_de_saida)
+```
+
+#Necessário criar um arquivo __init__.py
+#Pois (pipeline.py) requisita importação de parte (função, procedure) de outro módulo (etl.py).
+
+#Executar:
+```terminal
+poetry run python pipeline.py
+```
+
+# Finalizada aula 08 :)
 
