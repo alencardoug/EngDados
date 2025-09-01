@@ -497,5 +497,9 @@ pipeline_calcular_kpi_de_vendas_consolidado(pasta_argumento, formato_de_saida)
 poetry run python pipeline.py
 ```
 
+#git add
+#git commit
+#git push
+
 # Finalizada aula 08 :)
 
