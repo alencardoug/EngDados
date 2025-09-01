@@ -429,6 +429,25 @@ if __name__ == "__main__":
    pasta_argumento = 'data'
    data_frame = extrair_dados_e_consolidar(pasta=pasta_argumento)
    print(calcular_kpi_de_total_de_vendas(data_frame))
+```
+
+#Para rodar o código:
+```terminal
+poetry run python etl.py
+```
+
+#Para criar parquet com pandas:
+```terminal
+poetry add fastparquet
+```
+
+#Criando a ~função~ procedure para carregar dados:
+
+```python
+
+parâmetro que vai...
+```
+
 
 # Continuar aula 08: 33:33
 
