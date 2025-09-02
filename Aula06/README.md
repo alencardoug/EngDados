@@ -512,16 +512,20 @@ poetry run python pipeline.py
 #3. Log via loguru 
 
 ```terminal
-# poetry add loguru
+poetry init
+poetry shell
+poetry add loguru
 ```
 
 ```python
 from loguru import logger
 
+logger.add("meu_app.log") # Criar o arquivo log
+
 def somar(x, y):
    logger.info(x)
    logger.info(y)
-   logger.info(x + y)
+   logger.info(f"você quer uma soma: {x + y}")
    return x + y
 
 somar(2, 3)
@@ -529,5 +533,19 @@ somar(2, "3")
 ```
 
 ```terminal
-poetry run python exemplo_00.py
+poetry run python exemplo_001.py
 ```
+
+# Na aula 09 do repositório, há exemplos dos loggers com {} e outros.
+```python
+from loguru import logger
+
+logger.debug("um aviso para o desenvolvedor no futuro")
+logger.info("informação importante no processo")
+logger.warning("um aviso de que algo vai parar de funcionar no futuro")
+logger.error("aconteceu uma falha")
+logger.critical("aconteceu uma falha que aborta a aplicação")
+logger.add("meu_log.log", level = "CRITICAL")
+```
+
+# Parei em 21:30 aula 09
