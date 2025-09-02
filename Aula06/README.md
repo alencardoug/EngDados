@@ -502,9 +502,32 @@ poetry run python pipeline.py
 #git push
 
 # Finalizada aula 08 :)
-#Aula 09: decoradores
-#Na engenharia de dados, a eficiência, reusabilidade e confiabilidade do código são cruciais. Por isso trabalhamos com decoradores.
-#Criar novo repositório.
+# Aula 09: decoradores
+# Na engenharia de dados, a eficiência, reusabilidade e confiabilidade do código são cruciais. Por isso trabalhamos com decoradores.
+# Criar novo repositório.
 
-#
+# 3 formas de testar um código:
+#1. print()
+#2. VS Code Debug
+#3. Log via loguru 
 
+```terminal
+# poetry add loguru
+```
+
+```python
+from loguru import logger
+
+def somar(x, y):
+   logger.info(x)
+   logger.info(y)
+   logger.info(x + y)
+   return x + y
+
+somar(2, 3)
+somar(2, "3")
+```
+
+```terminal
+poetry run python exemplo_00.py
+```
