@@ -502,4 +502,9 @@ poetry run python pipeline.py
 #git push
 
 # Finalizada aula 08 :)
+#Aula 09: decoradores
+#Na engenharia de dados, a eficiência, reusabilidade e confiabilidade do código são cruciais. Por isso trabalhamos com decoradores.
+#Criar novo repositório.
+
+#
 
