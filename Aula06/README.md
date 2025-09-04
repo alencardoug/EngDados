@@ -501,21 +501,28 @@ poetry run python pipeline.py
 #git commit
 #git push
 
-# Finalizada aula 08 :)
-# Aula 09: decoradores
-# Na engenharia de dados, a eficiência, reusabilidade e confiabilidade do código são cruciais. Por isso trabalhamos com decoradores.
-# Criar novo repositório.
+#Finalizada aula 08 :)
 
-# 3 formas de testar um código:
+#Aula 09: decoradores
+
+#Na engenharia de dados, a eficiência, reusabilidade e confiabilidade do código são cruciais. Por isso trabalhamos com decoradores.
+#Criar novo repositório.
+
+#3 formas de testar um código:
 #1. print()
 #2. VS Code Debug
 #3. Log via loguru 
+
+#Para que serve o log:
+#Serve para registrar todos os erros, indicados via código, da pipeline. Registra de forma automática e autônoma a hora e o erro, independente do horário ou da execução.
 
 ```terminal
 poetry init
 poetry shell
 poetry add loguru
 ```
+
+#Abaixo, onde deveria ter print para verificar os valores, tem registrador de log.
 
 ```python
 from loguru import logger
@@ -536,7 +543,7 @@ somar(2, "3")
 poetry run python exemplo_001.py
 ```
 
-# Na aula 09 do repositório, há exemplos dos loggers com {} e outros.
+#Na aula 09 do repositório, há exemplos dos loggers com {} e outros.
 ```python
 from loguru import logger
 
@@ -546,6 +553,34 @@ logger.warning("um aviso de que algo vai parar de funcionar no futuro")
 logger.error("aconteceu uma falha")
 logger.critical("aconteceu uma falha que aborta a aplicação")
 logger.add("meu_log.log", level = "CRITICAL")
+```
+
+#Exemplo de uso, com log: 
+```python
+from loguru import logger
+
+logger.add("meu_log.log", level="CRITICAL")
+#este argumento level indica que eu só quero registrar os logs logger.critical
+
+def soma(x, y):
+   try:
+      soma = x + y
+      logger.info(f"você digitou valores corretos, parabéns {soma}")
+      return soma
+   except:
+      logger.critical("você tem que digitar valores corretos")
+
+soma(2,3)
+soma(2,7)
+soma(2,"3")
+```
+#ele vai printar todos os loggers, mas só vai salvar o critical.
+
+#no terminal:
+
+```terminal
+poetry shell
+poetry run python exemplo_00.py
 ```
 
 # Parei em 21:30 aula 09
