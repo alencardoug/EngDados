@@ -583,4 +583,6 @@ poetry shell
 poetry run python exemplo_00.py
 ```
 
-# Parei em 21:30 aula 09
+#Digitar código que log na tela e log crítico no arquivo, com variáveis especiais.
+
+# Parei em 24m aula 09
