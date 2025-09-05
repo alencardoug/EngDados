@@ -604,6 +604,10 @@ level="CRITICAL"
 #reutilizar ref1
 ```
 
-#há diversas opções e vale explorar no chat GPT
+#há como ampliar a personalização e parametrização, e vale explorar no chat GPT
+
+#há outras bibliotecas, alternativas. sentry (opensource), dynatrace, data dog (caro).
+
+#a ferramenta data dog tem o poder de, com o login da conta da cloud, como AWS ou GCP, verificar todas as mensagens de erro e sugerir soluções, categorizar, fazer análises, etc.
 
 # Parei em 24m aula 09
