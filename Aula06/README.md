@@ -562,6 +562,7 @@ from loguru import logger
 logger.add("meu_log.log", level="CRITICAL")
 #este argumento level indica que eu só quero registrar os logs logger.critical
 
+#A partir daqui até o fim, é ref1, referência reutilizada no código seguinte
 def soma(x, y):
    try:
       soma = x + y
@@ -583,6 +584,26 @@ poetry shell
 poetry run python exemplo_00.py
 ```
 
-#Digitar código que log na tela e log crítico no arquivo, com variáveis especiais.
+#Código de log na tela e log crítico no arquivo, com variáveis especiais.
+
+```python
+from loguru import logger
+from sys import stderr
+
+logger.add(
+sink=stderr,
+format="{time} <r>{level}</r> <g>{message}</g> {file},
+level="INFO"
+)
+
+logger.add(
+format="{time} {level} {message} {file},
+level="CRITICAL"
+)
+
+#reutilizar ref1
+```
+
+#há diversas opções e vale explorar no chat GPT
 
 # Parei em 24m aula 09
