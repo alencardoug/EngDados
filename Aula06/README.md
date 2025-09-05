@@ -610,4 +610,6 @@ level="CRITICAL"
 
 #a ferramenta data dog tem o poder de, com o login da conta da cloud, como AWS ou GCP, verificar todas as mensagens de erro e sugerir soluções, categorizar, fazer análises, etc.
 
-# Parei em 24m aula 09
+
+
+# Parei em 42m aula 09 -> aprendendo a usar log_decorator
