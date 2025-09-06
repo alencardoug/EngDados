@@ -636,5 +636,29 @@ def log_decorator(func): #função q recebe função
 
 ```
 
+#como precisa puxar o módulo, então criar um arquivo e init:
+#criar arquivo __init__.py
 
-# Parei em 42m aula 09 -> aprendendo a usar log_decorator
+#o @log_decorator puxa o wrapper de função log:
+#continuando o caso, no arquivo ETL:
+```python
+from utils_log import log_decorator
+
+@log_decorator
+def soma(x, y):
+   return x + y
+
+soma(2, 3)
+
+```
+
+```bash
+poetry run python pipeline.py
+```
+
+#atentar que essa função @wrapper consome memória
+#e dá para embrulhar em cascata, wrapper dentro de wrapper
+
+
+
+# Parei em 48m aula 09 -> aprendendo a usar log_decorator
