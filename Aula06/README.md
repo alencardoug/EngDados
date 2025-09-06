@@ -610,6 +610,31 @@ level="CRITICAL"
 
 #a ferramenta data dog tem o poder de, com o login da conta da cloud, como AWS ou GCP, verificar todas as mensagens de erro e sugerir soluções, categorizar, fazer análises, etc.
 
+#abaixo um wrapper que tem por finalidade ser uma função que engloba outra função:
+#caso aplicado, adicionar log em funções existentes. Se a função deu certo, retorna que a execução da função + log de sucesso com descrição textual do resultado. Se falhar, dá log de erro: 
+#Primeiro, utilizar (ou criar) um pipeline utilitário (utils_log.py). Abrir, codar:
+
+```python
+from loguru import logger
+from sys import stderr
+from fun tools import wraps
+
+def log_decorator(func): #função q recebe função 
+   @wraps(func)
+   #para a função recebida não perder as características originais dela
+   def wrapper(*args, **kwargs):
+   #padrão, para receber argumentos e argumentos reservados daquela função.
+      logger.info(f"Chamando função '{func.__name__}' com args {args} e kwargs
+      try:
+         result = func(*args, **kwargs)
+         logger.info(f"Função '{func.__name__}' retornou {result}")
+         return result
+      except Exception as e:
+         logger.exception(f"Exceção capturada em '{func.__name__}': {e}")
+         raise # Relança a exceção para não alterar o comportamento da função 
+   return wrapper
+
+```
 
 
 # Parei em 42m aula 09 -> aprendendo a usar log_decorator
