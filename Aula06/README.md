@@ -659,6 +659,62 @@ poetry run python pipeline.py
 #atentar que essa função @wrapper consome memória
 #e dá para embrulhar em cascata, wrapper dentro de wrapper
 
+#decorator com função de registrar a duração da execução de um pipeline:
+#timer_decorator.py
 
+```python
+import time 
+from loguru import logger
+from fun tools import wraps
+
+# decorador de medida de tempo 
+
+def time_measure_decorator(func):
+   @wraps(func)
+   def wrapper(*args, **kwargs):
+      start_time = time.time()
+      result = func(*args, **kwargs)
+      end_time = time.time()
+      logger.info(f"Função '{func.__name__}' executada em {end_time - start_time} segundos"
+      return result
+   return wrapper
+```
+
+#e adicionar o @decorator na pipeline.py
+
+```python
+#[...]
+from timer_decorator import time_measure_decorator
+
+@time_measure_decorator
+def soma(x, y):
+   return x + y
+
+soma(2, 3)
+```
+
+#outro decorator importante é o que permite um limite de tentativas (retry) do pipeline: 
+
+#criar um arquivo tenacity_exemplo.py
+#terminal: poetry add tenacity
+
+```python
+from tenacity import retry, stop_after_attempt, wait_fixed
+
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
+def get_user_input():
+   user_input = input("Digite 'ok' para continuar: ")
+   if user_input.lower() != 'ok':
+      print("Input incorreto. Por favor, tente novamente.")
+      raise ValueError("Input incorreto")
+   else: 
+      print("Input correto. Continuando...")
+
+#Chamar a função
+try:
+   get_user_input()
+except Exception as e:
+   print(f"Finalmente falhou após várias tentativas: {e}")
+```
 
 # Parei em 48m aula 09 -> aprendendo a usar log_decorator
