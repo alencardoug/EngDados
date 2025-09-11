@@ -717,4 +717,8 @@ except Exception as e:
    print(f"Finalmente falhou após várias tentativas: {e}")
 ```
 
-# Parei em 48m aula 09 -> aprendendo a usar log_decorator
+#também existe decorador de Cache. o que isso quer dizer? às vezes é necessário puxar um dado da nuvem, então pode ser que este dado já tenha sido puxado antes e esteja no cache. se já estiver no cachê, não tem necessidade de puxar o dado da nuvem novamente. Este decorador ajuda nesta verificação e ação (não mostrou na aula, só o conceito).
+
+#também existe decorator aplicado para o acesso ao banco de dados em nuvem incluindo commit, rollback e finalização de sessão. foi mostrado um exemplo de código no fim da aula.
+
+# finalizado aula 09
