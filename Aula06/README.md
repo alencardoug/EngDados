@@ -721,4 +721,19 @@ except Exception as e:
 
 #também existe decorator aplicado para o acesso ao banco de dados em nuvem incluindo commit, rollback e finalização de sessão. foi mostrado um exemplo de código no fim da aula.
 
-# finalizado aula 09
+#Projeto sem pandera:como vai validar input, output, schema de tabela? DBT. Mas o DBT só valida no final. Vai processar todo o spark/databricks para só no final ver que falhou no processamento? Pandera previne.
+#ter 20 pontos para saber se projeto é furada, além do escopo e premissa: se tem sistema legado (que ninguém sabe como funciona); se tem segurança; se tem infra; se tem git; se tem engenharia. Se não tiver problema, projeto fácil. Se tem furadas, calcular cada uma das furadas.
+#proposta: escopo é óbvio e básico. O que está fora do escopo e da premissa? E documentação, ambiente de desenvolvimento, e responsabilidade por quebra de banco?
+
+#Qual momento de instalar o pyenv? Após definição do projeto.
+#Saber a versão do python: python --version
+
+#Projeto novo? Versão estável mais nova. Se não dá por exemplo 3.12, usar 3.11. Se não, 3.10, mas atenção pois faz 2 anos que 3.10 não é atualizado.
+#Na ordem: Git, Pyenv, Poetry.
+
+#Para anotar os requirements (bibliotecas) do projeto instaladas:
+```bash
+pip freeze > requirements.txt
+```
+
+# iniciada aula 09, parei em 20:00
