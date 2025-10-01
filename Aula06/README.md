@@ -736,4 +736,24 @@ except Exception as e:
 pip freeze > requirements.txt
 ```
 
+#este com código com > anota o output no arquivo
+
+#biblioteca de documentação: 
+```bash
+poetry add mkdocs
+```
+
+#E então faz um novo requirements para um ambiente de Dev. Isso é útil pois, por exemplo, não precisa de documentação. Então só precisa do mkdocs para o ambiente dev. Para anotar as bibliotecas (requirements) para somente dev:
+```bash
+pip freeze > requirements-dev.txt
+```
+
+#E para (re)instalar tudo que está no requirements, ao invés de dar pip install pandas, por exemplo, dar o código abaixo que vai instalar todas as bibliotecas de uma vez: 
+```bash
+pip install -r requirements-dev.txt
+```
+
+#Este processo é o pip e ele não organiza as dependências instaladas de cada biblioteca. Já o poetry sim, então, é melhor de trabalhar com poetry. Ainda assim, ambos são utilizados.
+
 # iniciada aula 09, parei em 20:00
+
